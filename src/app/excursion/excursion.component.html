@@ -1,0 +1,15 @@
+<div *ngIf="excursions && excursions.length > 0">
+    <h2>Экскурсии:</h2>
+    <ul>
+      <li *ngFor="let excursion of excursions">
+        <strong>Название:</strong> {{ excursion.name }}<br/>
+        <strong>Описание:</strong> {{ excursion.description }}<br/>
+        <strong>Цена:</strong> ${{ excursion.price }}<br/>
+        <strong>Доступность:</strong> {{ excursion.available ? "Да" : "Нет" }}<br/>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!(excursions && excursions.length > 0)">
+    <p>Нет доступных экскурсий.</p>
+  </div>
+  

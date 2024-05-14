@@ -1,0 +1,60 @@
+/* Стили для навигационной панели */
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+.nav {
+    background-color: #333;
+    height: fit-content;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.4dvi;
+  }
+  
+  .nav .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+  }
+  
+  .nav .nav_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* Стили для логотипа */
+  
+  .nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav .logo span {
+    color: #d50032;
+  }
+  
+  /* Стили для навигационных ссылок */
+  
+  .nav .navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+  }
+  
+  .nav .navigation a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 25px;
+  }
+  
+  .nav .navigation a:hover {
+    color: #d50032;
+  }

@@ -1,0 +1,48 @@
+<div>
+    <h2>📝 Новое бронирование 📝</h2>
+    <form
+      [formGroup]="newTicketForm"
+      (ngSubmit)="editingTicket ? saveTicket() : createTicket()"
+    >
+      <label style="font-weight: bold; font-size: larger;" for="museumId">Музей</label>
+      <select id="museumId" formControlName="museumId" (change)="onMuseumChange()">
+        <option *ngFor="let museum of museums" [value]="museum.id">
+          {{ museum.name }}
+        </option>
+      </select>
+  
+      <label for="excursionId">Экскурсия</label>
+      <select id="excursionId" formControlName="excursionId" >
+        <option  *ngFor="let excursion of filteredexcursions" [value]="excursion.id">
+          Номер: {{ excursion.id }} Название: {{ excursion.name }} Цена: {{ excursion.price }}
+        </option>
+      </select>
+  
+  
+      <label for="checkInDate">Дата начала</label>
+      <input type="date" id="checkInDate" formControlName="checkInDate" />
+  
+      <label for="checkOutDate">Дата окончания</label>
+      <input type="date" id="checkOutDate" formControlName="checkOutDate" />
+  
+      <button type="submit">
+        {{ editingTicket ? "Сохранить" : "Создать" }}
+      </button>
+      <button style="font-style: italic;" type="button" *ngIf="editingTicket" (click)="cancelEdit()">
+        Отменить
+      </button>
+    </form>
+  
+    <h2>Текущие бронирования</h2>
+    <ul>
+      <li *ngFor="let ticket of tickets">
+        <p style="font-weight: bold; font-size: larger;">Музей: {{ ticket.museumId }}</p>
+        <p>Экскурсия: {{ ticket.excursionId }}</p>
+        <p>Дата заезда: {{ ticket.checkInDate | date }}</p>
+        <p>Дата выезда: {{ ticket.checkOutDate | date }}</p>
+        <p>Статус: {{ ticket.status }}</p>
+        <button style="font-style: italic;" (click)="editTicket(ticket)">Редактировать</button>
+        <button style="font-style: italic;" (click)="deleteTicket(ticket.id)">Удалить</button>
+      </li>
+    </ul>
+  </div>

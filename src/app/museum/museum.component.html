@@ -1,0 +1,17 @@
+<h1>🏛 Музеи 🏛</h1>
+
+<div id="museum" *ngFor="let museum of museums">
+  <p style="font-weight: bold; font-size: larger;">{{ museum.name }}</p>
+  <p>Адрес: {{ museum.address }}</p>
+  <p>Контактная информация {{ museum.contactInfo }}</p>
+  <button style="font-style: italic;" (click)="showExcursionsForMuseum(museum.id)">Посмотреть экскурсии</button>
+</div>
+ 
+<div id="excursions" *ngIf="selectedMuseum">
+  <h2>Экскурсии в музее {{ selectedMuseum.name }}</h2>
+  <div *ngFor="let excursion of excursions">
+    <p>Название: {{ excursion.name }}</p>
+    <p>Описание: {{ excursion.description }}</p>
+    <p>Цена: ${{ excursion.price }}</p>
+  </div>
+</div>

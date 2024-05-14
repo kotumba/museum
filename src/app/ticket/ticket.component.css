@@ -1,0 +1,96 @@
+/* Общие стили */
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+  }
+  
+  body {
+    background-color: #b1b1b1;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #d50032;
+    
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #6c757d;
+    margin-top: 7dvi;
+  }
+  
+  /* Стили формы бронирования */
+  form {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #c3b7b7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: max-content;
+    margin: auto;
+    margin-bottom: 3dvi;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #495057;
+  }
+  
+  select,
+  input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+
+  }
+  
+  button {
+    background-color: #d50032;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Добавляем отступ между кнопками */
+  }
+  
+  button:hover {
+    background-color: #a50025;
+  }
+  
+  /* Стили списка бронирований */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #c3b7b7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  li p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #495057;
+  }
